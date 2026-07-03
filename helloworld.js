@@ -77,7 +77,7 @@ console.log("Vowels count :", count);
 // level 8 - solve the problem - Remove Duplicate
 /*
 let duplicate = [1, 2, 3, 4, 4, 4, 6, 5, 6, 7, 3, 4, 5, 6, 7, 8, 9, 9, 0, 9, 8, 7, 6, 5, 4, 3, 2, 1];
-let result = [...new Set(duplicate)];
+let result = [...new Set(duplicate)]; //
 console.log("Duplicates :", result);
 */
 // - - - - - - - - another wy to solve the problem - Remove Duplicate
@@ -91,5 +91,25 @@ carryDuplicate.push(duplicate[i]);
 console.log("Duplicates :", carryDuplicate);
 */
 // level 9 - solve the problem - FizzBuzz ⭐
+let Fizz = [];
+let Buzz = [];
+let FizzBuzz = [];
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0) {
+    Fizz.push(i);
+  }
+  if (i % 5 === 0) {
+    Buzz.push(i);
+  }
+  if (i % 3 === 0 && i % 5 === 0 ) {
+   FizzBuzz.push(i);
+}
+}
+console.log("Fizz\n")
+console.log(Fizz);
+console.log("buzz\n")
+console.log(Buzz);
+console.log("FizzBuzz\n")
+console.log(FizzBuzz);
 
 // level 10 - solve the problem
