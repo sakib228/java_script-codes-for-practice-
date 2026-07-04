@@ -1,7 +1,3 @@
-// const parameterVariable = ' Welcome to 10 days of javascript';
-// console.log('Hello,World!');
-// console.log('Hello,World!',"\n",parameterVariable);
-
 // level 1 - solve the problem - sum of numbers
 /*
 let a = 10;
@@ -91,6 +87,7 @@ carryDuplicate.push(duplicate[i]);
 console.log("Duplicates :", carryDuplicate);
 */
 // level 9 - solve the problem - FizzBuzz ⭐
+/*
 let Fizz = [];
 let Buzz = [];
 let FizzBuzz = [];
@@ -111,5 +108,4 @@ console.log("buzz\n")
 console.log(Buzz);
 console.log("FizzBuzz\n")
 console.log(FizzBuzz);
-
-// level 10 - solve the problem
+*/
