@@ -66,6 +66,7 @@ console.log("sum array : ", sumArray([1, 2, 3, 4, 5, 6]));
 */
 // Level - 6 Capitalize First Letter of Each Word
 /*
+
 function capitalizeFirstLetter(str) {
   // edge case
   // 1 . if user input is null.undefine and just only white space and only one word
@@ -79,3 +80,45 @@ function capitalizeFirstLetter(str) {
 }
 console.log("capitalize first letter : ", capitalizeFirstLetter("Hello world"));console.log("capitalize first letter : ", capitalizeFirstLetter("Hello world. this is    the world "));
 */
+// Level -7 - Frequency Counter Logic
+/*
+
+function frequencyCount(str) {
+  // edge case
+  if (!str || typeof str !== "string" || str.trim() === "" || str.length === 0) {
+    console.log(" Enter a valid String");
+    return {};
+  }
+
+  const freq = {};
+  for (let x of str) {
+    freq[x] = freq[x] ? freq[x] + 1 : 1;
+    // freq[x] = freq[x] ? freq[x] + 1 : 1; // if key exists increment the value by 1
+  }
+  return freq;
+}
+
+console.log("Frequency counter : ", frequencyCount("Hello World"));
+console.log("Frequency counter : ", frequencyCount("Hello World. this is    the world "));
+*/
+// Level - 8 - Find Missing Number
+function findMissingNumber(arr) {
+  //edge case
+  if (!arr|| arr.length === 0) {
+    console.log("Enter a valid array");
+    return 0;
+  }
+  let totalSum = 0;
+  let n = arr.length + 1;
+  let expectSum = (n * (n + 1) / 2);
+  // let totalSum = arr.reduce((a, b) => a + b, 0); // reduce the array to get the sum
+  for (let i = 0; i < arr.length; i++) {
+    totalSum += arr[i]; //another way to get the sum
+  }
+  return (expectSum - totalSum);
+}
+
+console.log("Missing number : ", findMissingNumber([1, 2, 3, 5]));
+console.log("Missing number : ", findMissingNumber([1, 2, 3, 4, 6]));
+console.log("Missing number : ", findMissingNumber([1, 2, 3, 4, 5, 6, 7, 8, 10]));
+
