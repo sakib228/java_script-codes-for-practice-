@@ -82,7 +82,6 @@ console.log("capitalize first letter : ", capitalizeFirstLetter("Hello world"));
 */
 // Level -7 - Frequency Counter Logic
 /*
-
 function frequencyCount(str) {
   // edge case
   if (!str || typeof str !== "string" || str.trim() === "" || str.length === 0) {
@@ -102,6 +101,7 @@ console.log("Frequency counter : ", frequencyCount("Hello World"));
 console.log("Frequency counter : ", frequencyCount("Hello World. this is    the world "));
 */
 // Level - 8 - Find Missing Number
+/*
 function findMissingNumber(arr) {
   //edge case
   if (!arr|| arr.length === 0) {
@@ -121,4 +121,55 @@ function findMissingNumber(arr) {
 console.log("Missing number : ", findMissingNumber([1, 2, 3, 5]));
 console.log("Missing number : ", findMissingNumber([1, 2, 3, 4, 6]));
 console.log("Missing number : ", findMissingNumber([1, 2, 3, 4, 5, 6, 7, 8, 10]));
+*/
+/*
+Q9. Level - 9 - Function Challenge
+Write a Function :
+function calculator(a, b, operator)
+where
+"+" → যোগ
+"-" → বি য়োগ
+"*" → গুণ
+"/" → ভাগ
+*/
+/*
+function calculator(a, b, operator) {
+  // edge case
+  if (!a || !b || b <= 0 || typeof operator !== 'string') {
+    console.log('Enter a valid number');
+    return 0;
+  }
+  if (operator === '+') {
+    return a + b;
+  } else if (operator === '-') {
+    return a - b;
+  } else if (operator === '*') {
+    return a * b;
+  } else if (operator === '/' && b !== 0) {
+    return a / b;
+  }
+}
 
+console.log('calculator : ', calculator(10, 20, '+'));
+console.log('calculator : ', calculator(10, 20, '-'));
+console.log('calculator : ', calculator(10, 20, '*'));
+console.log('calculator : ', calculator(40, 40, '/'));
+*/
+// Level - 10 - mini banking system
+let account = {
+  balance: 0,
+  deposit: function (amount) {
+    this.balance += amount;
+  },
+  withdraw: function (amount) {
+    if (amount > this.balance) {
+      console.log('Insufficient Balance');
+      return;
+    }
+    this.balance -= amount;
+  },
+};
+
+account.deposit(1200);
+account.withdraw(600);
+console.log('Balance : ', account.balance);
